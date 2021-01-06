@@ -1,0 +1,13 @@
+
+<igx-list>
+  <igx-list-item isHeader="true">
+   All Users
+  </igx-list-item>
+  <igx-list-item *ngFor="let user of users">
+    <h4 igxListLineTitle>{{ user.name }}</h4>
+   <p igxListLineSubTitle>
+    <span *ngFor="let fan of user.fansIDS">{{fan}} ,</span>
+     </p>
+   <igx-icon igxListAction [color]="user.isFavorite ? 'orange' : 'lightgray'" (click)="updateUserLikes(user.name)">star</igx-icon>
+  </igx-list-item>
+</igx-list>
