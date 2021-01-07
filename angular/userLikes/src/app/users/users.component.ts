@@ -10,7 +10,7 @@ export class UsersComponent implements OnInit {
     updateResult: any;
     updateUserLikesURL: string;
     loginUser: any;
-    users=[];
+    users:any;
     getAllUsersURL: string;
 
   constructor(private api:ApiService) { }
